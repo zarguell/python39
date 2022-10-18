@@ -1,0 +1,31 @@
+name: Sync From IronBank
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3 4 * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Clone/Copy Remote
+      run: |-
+        git clone https://repo1.dso.mil/dsop/opensource/python/python39.git
+        rsync -a --exclude={'Dockerfile','.gitlab','.git','.gitignore'} python39/ ./
+        rm -rf python39/
+
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Sync Iron Bank: ${timestamp}" || exit 0
+        git push
