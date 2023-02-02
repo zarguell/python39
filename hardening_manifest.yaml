@@ -31,10 +31,6 @@ resources:
 
 maintainers:
 - email: ironbank@dsop.io
-  username: alexander.klepal
-  name: alexander.klepal
-  cht_member: true
-- email: ironbank@dsop.io
-  username: sean.melissari
-  name: sean.melissari
+  username: colton.freeman
+  name: Colton Freeman
   cht_member: true
