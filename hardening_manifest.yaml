@@ -1,23 +1,22 @@
 apiVersion: v1
 
-name: opensource/python/python39
+name: opensource/python
 
 tags:
-- v3.9.16
-- v3.9
-- latest
+- '3.9.16'
+- '3.9'
 
 args:
   BASE_IMAGE: redhat/ubi/ubi8
   BASE_TAG: "8.7"
 
 labels:
-  org.opencontainers.image.title: python39
+  org.opencontainers.image.title: python
   org.opencontainers.image.description: Python programming language
   org.opencontainers.image.licenses: Python Software Foundation
   org.opencontainers.image.url: https://www.python.org/
   org.opencontainers.image.vendor: Python Software Foundation
-  org.opencontainers.image.version: v3.9.16
+  org.opencontainers.image.version: 3.9.16
   mil.dso.ironbank.image.keywords: python,programming,language
   mil.dso.ironbank.image.type: opensource
   mil.dso.ironbank.product.name: python
