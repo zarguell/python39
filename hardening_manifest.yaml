@@ -3,7 +3,7 @@ apiVersion: v1
 name: opensource/python
 
 tags:
-- 'v3.9.16'
+- 'v3.9.17'
 - 'v3.9'
 
 args:
@@ -16,17 +16,17 @@ labels:
   org.opencontainers.image.licenses: Python Software Foundation
   org.opencontainers.image.url: https://www.python.org/
   org.opencontainers.image.vendor: Python Software Foundation
-  org.opencontainers.image.version: v3.9.16
+  org.opencontainers.image.version: v3.9.17
   mil.dso.ironbank.image.keywords: python,programming,language
   mil.dso.ironbank.image.type: opensource
   mil.dso.ironbank.product.name: python
 
 resources:
 - filename: python.tar.gz
-  url: https://github.com/python/cpython/archive/refs/tags/v3.9.16.tar.gz
+  url: https://github.com/python/cpython/archive/refs/tags/v3.9.17.tar.gz
   validation:
     type: sha256
-    value: 9fe94a3fce1bf2fdc0be3164003ca8b4c4252685caa7882c26c24e4845e755fa
+    value: 2a060897dd367bce1e4130da39b009aeaa83e5440ba6485336248d8e6cf1ad7c
 
 maintainers:
 - email: ironbank@dsop.io
