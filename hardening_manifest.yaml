@@ -3,12 +3,11 @@ apiVersion: v1
 name: opensource/python
 
 tags:
-- 'v3.9.18'
 - 'v3.9'
 
 args:
-  BASE_IMAGE: redhat/ubi/ubi8
-  BASE_TAG: "8.8"
+  BASE_IMAGE: redhat/ubi/ubi9
+  BASE_TAG: "9.2"
 
 labels:
   org.opencontainers.image.title: python
@@ -16,20 +15,109 @@ labels:
   org.opencontainers.image.licenses: Python Software Foundation
   org.opencontainers.image.url: https://www.python.org/
   org.opencontainers.image.vendor: Python Software Foundation
-  org.opencontainers.image.version: v3.9.18
-  mil.dso.ironbank.image.keywords: python,programming,language
+  org.opencontainers.image.version: v3.9
+  mil.dso.ironbank.image.keywords: python, programming language
   mil.dso.ironbank.image.type: opensource
   mil.dso.ironbank.product.name: python
 
 resources:
-- filename: python.tar.gz
-  url: https://github.com/python/cpython/archive/refs/tags/v3.9.18.tar.gz
+- filename: cairo-1.17.4-7.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cairo-1.17.4-7.el9.x86_64.rpm
   validation:
     type: sha256
-    value: f9ecf4034ab3410ad1f906f78fab7e0fe3f56af2c79b689f2dd28ff85d1a1b7e
+    value: 5f5177fd5b3ed4ffdf218f730e85af73c223b09f759e47b1c7f2df05d8f87655
+- filename: cairo-devel-1.17.4-7.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cairo-devel-1.17.4-7.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: e34ac60cd4006a904a835be11aa0849fcce7b3c53219b7dddc8f4b007b1302da
+- filename: cairo-gobject-devel-1.17.4-7.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cairo-gobject-devel-1.17.4-7.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 77613065496f7f097b7d85a74bee729eb1dd965eb59842c1bb3a5c127198e533
+- filename: cairo-gobject-1.17.4-7.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cairo-gobject-1.17.4-7.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 2329c39bdde48e1c2f0f64cfebb7edd92ea5188be374396402e03e876d06ad02
+- filename: cmake-3.20.2-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cmake-3.20.2-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: afba4f6879f78c9f62709500f26bf67d0dafca88161f490e5a162a822df1041a
+- filename: dbus-1.12.20-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/Packages/dbus-1.12.20-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: d13d52df79bb9a0a1795530a5ce1134c9c92a2a7c401dfc3827ee8bf02f60018
+- filename: dbus-devel-1.12.20-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/dbus-devel-1.12.20-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 9114eef0c3eea868948bb9f2e807d5aeefac3ab013a7f3dd176c4e165cf0c2be
+- filename: dbus-daemon-1.12.20-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/dbus-daemon-1.12.20-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: adad57c68bda91222baed4b3e81d9fd13e9e4c69e5ab818db9a56e181a76ebf7
+- filename: dbus-tools-1.12.20-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/Packages/dbus-tools-1.12.20-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 1e054e9f5e2100414fe44df1f4b7592e6703949308d26cb78cd51e98fdfe224a
+- filename: dbus-common-1.12.20-8.el9.noarch.rpm
+  url: https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/Packages/dbus-common-1.12.20-8.el9.noarch.rpm
+  validation:
+    type: sha256
+    value: ff91286d9413256c50886a0c96b3d5d0773bd25284b9a94b28b98a5215f09a56
+- filename: dbus-libs-1.12.20-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/Packages/dbus-libs-1.12.20-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 2d46aaa0b1e8032d10156b040a5226b5a90ef000d8d85d40fd5671379a5bc904
+- filename: libXrender-devel-0.9.10-16.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/libXrender-devel-0.9.10-16.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: fad7f6030e6d0f7daafb0d9e0ae0eb5b47a4d1014262ff818f66a3adb084868f
+- filename: libXrender-0.9.10-16.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/libXrender-0.9.10-16.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 3e10d2880341fcb9dd697a6d1812981e67e976f571b23756c7d89d52c70f1142
+- filename: xml-common-0.6.3-58.el9.noarch.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/xml-common-0.6.3-58.el9.noarch.rpm
+  validation:
+    type: sha256
+    value: f5d8c3fe25e7e46e39bac4a03b1b6c7b9601e6df62af59e4edf34548406d4f95
+- filename: pixman-0.40.0-5.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/pixman-0.40.0-5.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 8673872772fec90180fa9688363b4d808c5d01bd9951afaddfa7e64bb7274aba
+- filename: pixman-devel-0.40.0-5.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/pixman-devel-0.40.0-5.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 2c9cad0079bcbef5170c084d13169a1acd351d3bce1faaf609060d0a686c8c48
+- filename: gobject-introspection-devel-1.68.0-11.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/CRB/x86_64/os/Packages/gobject-introspection-devel-1.68.0-11.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 0d16b86ab6f22807eb7e6ad182cefba397288e57c172e2d534dc6b4b5455a259
+- filename: libXext-devel-1.3.4-8.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/libXext-devel-1.3.4-8.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: a17c0bc8c1263ca9f42c713fa7da4e3786c0ab27379c0da5f3a726a09ff6ee22
 
 maintainers:
-- email: ironbank@dsop.io
-  username: colton.freeman
-  name: Colton Freeman
-  cht_member: true
+  - name: "Colton Freeman"
+    username: "colton.freeman"
+    email: "ironbank@dsop.io"
+    cht_member: true
+  - name: "Jeff Weatherford"
+    username: "jweatherford"
+    email: "jweatherford@oteemo.com"
+    cht_member: true

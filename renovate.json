@@ -1,37 +1,4 @@
 {
-  "assignees": [
-    "@colton.freeman"
-  ],
-  "baseBranches": [
-    "development"
-  ],
-  "automerge": true,
-  "gitLabAutomerge": true,
-  "packageRules": [
-    {
-      "datasources": [
-        "github-tags"
-      ],
-      "packageNames": [
-        "python/cpython"
-      ],
-      "separateMinorPatch": true,
-      "minor": {
-        "enabled": false
-      }
-    }
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "^hardening_manifest.yaml$"
-      ],
-      "matchStrings": [
-        "org\\.opencontainers\\.image\\.version:\\s+(\\s|\"|')?(?<currentValue>.+?)(\\s|\"|'|$)",
-        "tags:\\s+-(\\s|\"|')+(?<currentValue>.+?)(\\s|\"|'|$)+"
-      ],
-      "depNameTemplate": "python/cpython",
-      "datasourceTemplate": "github-tags"
-    }
-  ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
 }
+
