@@ -4,7 +4,6 @@ name: opensource/python
 
 tags:
 - 'v3.9'
-- 'latest'
 
 args:
   BASE_IMAGE: redhat/ubi/ubi9
