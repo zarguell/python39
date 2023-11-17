@@ -7,7 +7,7 @@ tags:
 
 args:
   BASE_IMAGE: redhat/ubi/ubi9
-  BASE_TAG: "9.2"
+  BASE_TAG: "9.3"
 
 labels:
   org.opencontainers.image.title: python
