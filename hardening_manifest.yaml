@@ -41,11 +41,26 @@ resources:
   validation:
     type: sha256
     value: 2329c39bdde48e1c2f0f64cfebb7edd92ea5188be374396402e03e876d06ad02
-- filename: cmake-3.20.2-8.el9.x86_64.rpm
-  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cmake-3.20.2-8.el9.x86_64.rpm
+- filename: cmake-3.26.5-2.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cmake-3.26.5-2.el9.x86_64.rpm
   validation:
     type: sha256
-    value: afba4f6879f78c9f62709500f26bf67d0dafca88161f490e5a162a822df1041a
+    value: c1c6187ca1ea06c24ea563514450cb5fe46864eeb5eea3450440ed9fdf86ae67
+- filename: cmake-filesystem-3.26.5-2.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cmake-filesystem-3.26.5-2.el9.x86_64.rpm
+  validation:
+    type: sha256
+    value: 4a3c39e721eb1c01bf5e421262c2f10f9ed6b7e987fd2f9c510d309e2b023222
+- filename: cmake-data-3.26.5-2.el9.noarch.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cmake-data-3.26.5-2.el9.noarch.rpm
+  validation:
+    type: sha256
+    value: 1b8897991d5d5f86677fbfa4c63357c81345d22f70f2cec140489d98cb49147b
+- filename: cmake-rpm-macros-3.26.5-2.el9.noarch.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/cmake-rpm-macros-3.26.5-2.el9.noarch.rpm
+  validation:
+    type: sha256
+    value: 0a86f8238034aaaafa481f77869c636be3771dcb9792973c969b8a9f4b4ec67b
 - filename: dbus-1.12.20-8.el9.x86_64.rpm
   url: https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/Packages/dbus-1.12.20-8.el9.x86_64.rpm
   validation:
