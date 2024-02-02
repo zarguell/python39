@@ -106,16 +106,16 @@ resources:
   validation:
     type: sha256
     value: f5d8c3fe25e7e46e39bac4a03b1b6c7b9601e6df62af59e4edf34548406d4f95
-- filename: pixman-0.40.0-5.el9.x86_64.rpm
-  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/pixman-0.40.0-5.el9.x86_64.rpm
+- filename: pixman-0.40.0-6.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/pixman-0.40.0-6.el9.x86_64.rpm
   validation:
     type: sha256
-    value: 8673872772fec90180fa9688363b4d808c5d01bd9951afaddfa7e64bb7274aba
+    value: e5f710c9d8ab38f2286070877560e99a28d3067ac117231e68c9e8cfb5c617de
 - filename: pixman-devel-0.40.0-5.el9.x86_64.rpm
-  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/pixman-devel-0.40.0-5.el9.x86_64.rpm
+  url: https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/pixman-devel-0.40.0-6.el9.x86_64.rpm
   validation:
     type: sha256
-    value: 2c9cad0079bcbef5170c084d13169a1acd351d3bce1faaf609060d0a686c8c48
+    value: b0bd4db0173d65f476dec24cfd5ce7bc196fc88713ee2e5acf5d1b3542c483d3
 - filename: gobject-introspection-devel-1.68.0-11.el9.x86_64.rpm
   url: https://mirror.stream.centos.org/9-stream/CRB/x86_64/os/Packages/gobject-introspection-devel-1.68.0-11.el9.x86_64.rpm
   validation:
