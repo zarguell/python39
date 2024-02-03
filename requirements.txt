@@ -1,2 +1,2 @@
-dbus-python
+dbus-next
 wheel
